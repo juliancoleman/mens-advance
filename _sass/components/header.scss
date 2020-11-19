@@ -33,5 +33,9 @@ header {
     margin-right: 21px;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }
