@@ -25,7 +25,9 @@ header {
     font-size: 0.75rem;
   }
 
-  nav {
+  nav a {
     color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
