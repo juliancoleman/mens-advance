@@ -33,4 +33,14 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
       -->s
     {% endif %}
   </h4>
+
+  {% for speaker in speakers %}
+    {% include speaker-card.html
+               name="{{ speaker.name }}"
+               avatar="{{ speaker.avatar }}"
+               bio_short="{{ speaker.bio_short }}"
+               bio_long="{{ speaker.bio_long }}"
+               url="{{ speaker.url }}"
+    %}
+  {% endfor %}
 </div>
