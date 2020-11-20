@@ -36,10 +36,18 @@
     font-size: 3rem;
     font-weight: normal;
     text-transform: uppercase;
+
+    margin-bottom: 75px;
   }
 
   .hero-title,
   .hero-subtitle {
     margin: 0;
+  }
+
+  .hero-blurb {
+    font-size: 0.875rem;
+    line-height: 2.1875rem;
+    text-align: center;
   }
 }
