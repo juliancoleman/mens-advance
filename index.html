@@ -34,13 +34,16 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
     {% endif %}
   </h4>
 
-  {% for speaker in site.speakers %}
-    {% include speaker-card.html
-               avatar=speaker.avatar
-               bio_long=speaker.bio_long
-               bio_short=speaker.bio_short
-               name=speaker.name
-               url=speaker.url
-    %}
-  {% endfor %}
+  <div style="margin-top: 6rem;">
+    {% for speaker in site.speakers %}
+      {% include speaker-card.html
+                 avatar=speaker.avatar
+                 bio_long=speaker.bio_long
+                 bio_short=speaker.bio_short
+                 name=speaker.name
+                 url=speaker.url
+      %}
+    {% endfor %}
+  </div>
+
 </div>
