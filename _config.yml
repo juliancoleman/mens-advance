@@ -7,3 +7,9 @@ links:
     label: speakers
   - url: /venue
     label: venue
+speakers:
+  - name: Mike Slayden
+    avatar: /assets/images/mike_slayden.png
+    bio_short: Mike serves as a Teaching Pastor at The Well Community Church in Fresno, California where he has been on staff since 2004.
+    bio_long: Mike serves as a Teaching Pastor at The Well Community Church in Fresno, California where he has been on staff since 2004. Passionate about all things outdoors, Mike loves to ski, mountain and road bike, and hike. You name it, he’s game! His greatest desire in life is to see lives transformed through the Gospel and teaching of God’s Word. Mike lives in Clovis with his wife, Michele, of 22 years, and his three amazing daughters.
+    url: /speakers#mike-slayden
