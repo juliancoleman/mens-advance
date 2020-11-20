@@ -6,6 +6,7 @@ header {
 
   div {
     display: inline-block;
+    height: 38px;
   }
 
   .logo {
@@ -30,12 +31,15 @@ header {
     font-family: $poppins;
     font-size: 0.75rem;
 
+    display: inline-block;
     margin-left: 8px;
     margin-right: 8px;
     padding: 7px 0;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
 
     &:not(.register-button) {
       &::after {
