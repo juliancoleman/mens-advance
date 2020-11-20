@@ -42,6 +42,7 @@
 .big-header {
   font-family: $roboto-slab;
   font-size: 3.5rem;
+  font-weight: normal;
   margin: 0;
   position: relative;
   text-transform: uppercase;
@@ -49,10 +50,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: -11px;
+    top: 0;
     left: 0;
     width: 45px;
-    height: 2px;
+    height: 3px;
     background: $gray;
   }
 }
