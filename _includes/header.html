@@ -7,7 +7,14 @@
   <div style="float: right;">
     <nav>
       {% for link in site.links %}
-        <a href="{{ link.url }}" {% if page.url == link.url %}class="active"{% endif %}>{{ link.label }}</a>
+        <a
+          href="{{ link.url }}"
+          {% if page.url == link.url %}
+            class="active"
+          {% endif %}
+        >
+          {{ link.label }}
+        </a>
       {% endfor %}
       {% include register-button.html %}
     </nav>
