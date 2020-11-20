@@ -38,3 +38,21 @@
   line-height: 2.1875rem;
   text-align: center;
 }
+
+.big-header {
+  font-family: $roboto-slab;
+  font-size: 3.5rem;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 45px;
+    height: 2px;
+    background: $gray;
+  }
+}
