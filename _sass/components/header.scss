@@ -36,16 +36,17 @@ header {
     text-decoration: none;
     text-transform: uppercase;
 
-    &::after {
+    &:not(.register-button)::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -7px;
+      left: 0;
       height: 2px;
       width: 100%;
       background-color: $white;
     }
 
-    &:last-of-type {
+    &.register-button {
       margin-right: 0;
     }
   }
