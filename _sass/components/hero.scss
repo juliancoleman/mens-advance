@@ -43,10 +43,14 @@
   }
 
   .hero-title,
+  .hero-subtitle {
+    margin: 0;
+  }
+
+  .hero-title,
   .hero-subtitle,
   .hero-blurb {
     font-family: $poppins;
-    margin: 0;
   }
 
   .hero-blurb {
