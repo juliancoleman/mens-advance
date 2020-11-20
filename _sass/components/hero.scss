@@ -46,6 +46,7 @@
 
   .hero-title,
   .hero-subtitle {
+    opacity: 0;
     position: relative;
     margin: 0;
     animation: 1s ease-out forwards fade-in-up;
