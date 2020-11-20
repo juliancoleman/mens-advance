@@ -1,11 +1,14 @@
 <figure class="hero" style="background: url({{ page.hero_url | relative_url }}) top 20% center no-repeat; background-size: cover;">
   <div class="overlay"></div>
 
-  <div class="container-wide">
+  <div class="container-wide hero-contents">
     <h2 class="hero-subtitle">{{ page.hero_subtitle }}</h2>
     <h3 class="hero-title">{{ page.hero_title }}</h3>
-    <div class="container">
+
+    <div class="container hero-blurb" style="margin-top: 75px">
       <p>{{ page.hero_blurb }}</p>
     </div>
+
+    {% include register-button.html %}
   </div>
 </figure>
