@@ -26,13 +26,11 @@
 
   .hero-subtitle {
     color: rgba(249, 249, 249, 0.67);
-    font-family: $poppins;
     font-size: 0.75rem;
   }
 
   .hero-title {
     color: $white;
-    font-family: $poppins;
     font-size: 3rem;
     font-weight: normal;
     text-transform: uppercase;
@@ -41,11 +39,14 @@
   }
 
   .hero-title,
-  .hero-subtitle {
+  .hero-subtitle,
+  .hero-blurb {
+    font-family: $poppins;
     margin: 0;
   }
 
   .hero-blurb {
+    color: $white;
     font-size: 0.875rem;
     line-height: 2.1875rem;
     text-align: center;
