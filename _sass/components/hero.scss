@@ -41,14 +41,14 @@
     font-size: 3.5rem;
     font-weight: normal;
     text-transform: uppercase;
-    animation-delay: 100ms !important;
+    animation-delay: 250ms !important;
   }
 
   .hero-title,
   .hero-subtitle {
     position: relative;
     margin: 0;
-    animation: 0.3s ease-out forwards fade-in-up;
+    animation: 1s ease-out forwards fade-in-up;
   }
 
   .hero-title,
