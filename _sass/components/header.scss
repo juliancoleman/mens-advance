@@ -36,14 +36,22 @@ header {
     text-decoration: none;
     text-transform: uppercase;
 
-    &:not(.register-button)::after {
-      content: "";
-      position: absolute;
-      bottom: -7px;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: $white;
+    &:not(.register-button) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: $white;
+        will-change: width;
+        transition: width 0.2s ease-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
     }
 
     &.register-button {
