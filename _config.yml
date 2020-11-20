@@ -1,2 +1,9 @@
 title: Men's Advance
 fonts_url: https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&family=Tangerine&display=swap
+links:
+  - url: /
+    label: home
+  - url: /speakers
+    label: speakers
+  - url: /venue
+    label: venue

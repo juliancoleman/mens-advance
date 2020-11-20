@@ -50,7 +50,8 @@ header {
         transition: width 0.2s ease-out;
       }
 
-      &:hover::after {
+      &:hover::after,
+      &.active {
         width: 100%;
       }
     }

@@ -6,9 +6,9 @@
 
   <div style="float: right;">
     <nav>
-      <a href="/">Home</a>
-      <a href="/speakers">Speakers</a>
-      <a href="/venue">Venue</a>
+      {% for link in site.links %}
+        <a href="{{ link.url }}" {% if page.url == link.url %}class="active"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
       {% include register-button.html %}
     </nav>
   </div>
