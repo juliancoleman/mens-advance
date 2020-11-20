@@ -9,3 +9,16 @@
 @import "components/header";
 @import "components/register-button";
 @import "components/hero";
+
+.container-wide {
+  width: 850px;
+}
+
+.container {
+  width: 687px;
+}
+
+.container-wide,
+.container {
+  margin: 0 auto;
+}
