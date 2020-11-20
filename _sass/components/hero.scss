@@ -18,5 +18,12 @@
     color: $white;
     font-family: $poppins;
     font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    margin: 0;
   }
 }
