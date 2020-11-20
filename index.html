@@ -35,6 +35,10 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
   </h4>
 
   {% for speaker in site.speakers %}
-    {% include speaker-card.html name=speaker.name avatar=speaker.avatar bio_short=speaker.bio_short bio_long=speaker.bio_long url=speaker.url %}
+    <div class="speaker-card">
+      <figure class="speaker-avatar">
+        <img src="{{ include.avatar }}" alt="{{ include.name }}">
+      </figure>
+    </div>
   {% endfor %}
 </div>
