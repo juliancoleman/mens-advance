@@ -2,6 +2,7 @@
 ---
 
 // Foundation
+@import "vars";
 @import "reset";
 @import "typography";
 
@@ -21,4 +22,11 @@
 .container-wide,
 .container {
   margin: 0 auto;
+}
+
+#about-text {
+  font-family: $poppins;
+  font-size: 1rem;
+  line-height: 3.1875rem;
+  margin: 60px 0 28px;
 }
