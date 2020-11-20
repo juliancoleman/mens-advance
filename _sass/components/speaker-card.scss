@@ -2,10 +2,14 @@
   text-align: center;
 
   .speaker-avatar {
-    margin: 0 auto;
+    margin: 0 auto 0.875rem;
     border-radius: 50%;
     height: 172px;
     width: 172px;
     overflow: hidden;
+  }
+
+  .speaker-name {
+    margin: 0;
   }
 }
