@@ -60,6 +60,13 @@
   }
 }
 
+.location {
+  background-image: url(/assets/images/StAnthonyPano500.jpg) center center
+    no-repeat;
+  background-size: cover;
+  padding: 1.125rem;
+}
+
 @media (max-width: 1200px) {
   .container-wide {
     padding: 1rem;
