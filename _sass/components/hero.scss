@@ -93,3 +93,10 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-contents {
+    top: unset;
+    transform: unset;
+  }
+}
