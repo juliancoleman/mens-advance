@@ -61,7 +61,7 @@
 }
 
 .location {
-  background-image: url("{{ '../images/StAnthonyPano500.jpg' | relative_url }}")
+  background-image: url("{{ site.baseurl }}/assets/images/StAnthonyPano500.jpg")
     center center no-repeat;
   background-size: cover;
   padding: 1.125rem;
