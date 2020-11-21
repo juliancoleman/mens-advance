@@ -16,3 +16,9 @@ main {
 body {
   margin: 0;
 }
+
+@media (max-width: 450px) {
+  main {
+    height: auto;
+  }
+}
