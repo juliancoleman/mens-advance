@@ -71,3 +71,10 @@
     padding: 1rem;
   }
 }
+
+// Add breakpoint for the image below the hero
+@media (max-width: 340px) {
+  .container > img {
+    width: 100%;
+  }
+}
