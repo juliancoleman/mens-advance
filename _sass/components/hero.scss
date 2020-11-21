@@ -99,15 +99,17 @@
     text-align: center;
   }
 
-  .hero-contents {
-    height: 100%;
-  }
-
   .hero-blurb {
     margin: 0 !important;
   }
 
   .hero-subtitle {
     margin: revert !important; // fixes this stupid bug where a randon break is added to the element.
+  }
+}
+
+@media (max-width: 450) {
+  .hero-contents {
+    height: 100%;
   }
 }
