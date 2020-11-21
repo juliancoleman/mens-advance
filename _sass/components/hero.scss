@@ -95,9 +95,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
   .hero-contents {
     height: 100%;
-    text-align: center;
   }
 
   .hero-blurb {
