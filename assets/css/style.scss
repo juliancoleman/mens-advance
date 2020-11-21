@@ -74,6 +74,10 @@
 
 // Add breakpoint for the image below the hero
 @media (max-width: 340px) {
+  html {
+    font-size: 13px; // make all fonts smaller at this size
+  }
+
   .container > img {
     width: 100%;
   }
