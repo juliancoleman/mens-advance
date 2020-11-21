@@ -108,6 +108,6 @@
   }
 
   .hero-subtitle {
-    margin: revert; // fixes this stupid bug where a randon break is added to the element.
+    margin: revert !important; // fixes this stupid bug where a randon break is added to the element.
   }
 }
