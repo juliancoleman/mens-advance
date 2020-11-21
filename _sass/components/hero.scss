@@ -107,4 +107,8 @@
   .hero-blurb {
     margin: 0 !important;
   }
+
+  .hero-subtitle {
+    margin: revert; // fixes this stupid bug where a randon break is added to the element.
+  }
 }
