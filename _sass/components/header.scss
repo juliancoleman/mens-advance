@@ -77,3 +77,9 @@ header {
     display: none;
   }
 }
+
+@media (max-width: 450px) {
+  #links {
+    display: none;
+  }
+}
