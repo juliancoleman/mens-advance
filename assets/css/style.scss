@@ -77,6 +77,10 @@
     background: linear-gradient(0deg, white, transparent);
     z-index: -1;
   }
+
+  iframe {
+    max-width: 100%;
+  }
 }
 
 .pricing {
