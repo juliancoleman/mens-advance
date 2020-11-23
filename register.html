@@ -36,7 +36,10 @@
     }
   });
 
+  paymentForm.build();
+
   function onGetCardNonce(event) {
+    event.preventDefault();
     paymentForm.requestCardNonce();
   }
 </script>
