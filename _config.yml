@@ -5,8 +5,8 @@ links:
     label: home
   # - url: /speakers
   #   label: speakers
-  - url: /venue
-    label: venue
+  # - url: /venue
+  #   label: venue
 speakers:
   - name: Mike Slayden
     avatar: /assets/images/mike_slayden.png
