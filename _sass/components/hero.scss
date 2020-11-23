@@ -135,11 +135,11 @@
 }
 
 @media (max-width: 450px) {
-  .hero-contents {
-    height: 100%;
+  .hero-title {
+    font-size: 2.5rem;
   }
 
   .hero-blurb .blurb-1 {
-    line-height: 1rem;
+    line-height: 2rem;
   }
 }
