@@ -6,8 +6,13 @@
   <button id="sq-creditcard" onclick="onGetCardNonce(event)">Pay $75.00</button>
 </div>
 
-<script type="text/javascript" src="https://js.squareupsandbox.com/v2/paymentform"></script>
+<script
+  type="text/javascript"
+  src="https://js.squareupsandbox.com/v2/paymentform"
+></script>
 <script>
+  var idempotency_key = uuidv4();
+
   var paymentForm = new SqPaymentForm({
     applicationId: "sandbox-sq0idb-FymkEHMQtf6ayqxDEhVIkw",
     inputClass: "sq-input",
@@ -30,10 +35,40 @@
     },
 
     callbacks: {
-      cardNonceResponseReceived: function(errors, nonce, cardData) {
-        alert("The generated nonce is:\n" + nonce);
-      }
-    }
+      cardNonceResponseReceived: function (errors, nonce, cardData) {
+        // Use XHR instead of Fetch for compatibility.
+        var url = "https://mens-advance-api.herokuapp.com/process-payment";
+        var xhr = new XMLHttpRequest();
+
+        var body = JSON.stringify({
+          nonce: nonce,
+          idempotency_key: idempotency_key,
+          location_id: "LAGYR80EAVG00",
+        });
+
+        xhr.onreadystatechange = function () {
+          // only run if the request is complete.
+          if (xhr.readyState !== 4) return;
+
+          // process our return data
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            // success
+            alert(
+              "Payment complete successfully!\nCheck browser developer console for more details"
+            );
+          } else {
+            // failure
+            alert(
+              "Payment failed to complete!\nCheck browser developer console for more details"
+            );
+          }
+        };
+
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(body);
+      },
+    },
   });
 
   paymentForm.build();
@@ -41,5 +76,18 @@
   function onGetCardNonce(event) {
     event.preventDefault();
     paymentForm.requestCardNonce();
+  }
+
+  // Generate a random UUID as an idempotency key for the payment request
+  // length of idempotency_key should be less than 45
+  function uuidv4() {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+      /[xy]/g,
+      function (c) {
+        var r = (Math.random() * 16) | 0,
+          v = c == "x" ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+      }
+    );
   }
 </script>
