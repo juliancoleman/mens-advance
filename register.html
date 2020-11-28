@@ -21,6 +21,69 @@
     placeholder="Last Name"
     oninput="updateCustomerInfo(event)"
   />
+  <input
+    type="text"
+    id="phoneNumber"
+    class="sq-input"
+    placeholder="Phone Number"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="buyerEmailAddress"
+    class="sq-input"
+    placeholder="Email Address"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="organization"
+    class="sq-input"
+    placeholder="Home church"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="addressLine1"
+    class="sq-input"
+    placeholder="Address Line 1"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="addressLine2"
+    class="sq-input"
+    placeholder="Apt, Suite, etc."
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="locality"
+    class="sq-input third"
+    placeholder="City"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="administrativeDistrictLevel1"
+    class="sq-input third"
+    placeholder="State"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="postalCode"
+    class="sq-input third"
+    placeholder="Postal"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="note"
+    class="sq-input"
+    placeholder="Roommate Request"
+    oninput="updateCustomerInfo(event)"
+  />
 
   <div id="sq-card-number"></div>
   <div class="third" id="sq-expiration-date"></div>
@@ -48,8 +111,11 @@
     firstName: "",
     lastName: "",
     locality: "",
-    organization: "",
-    postalCode: "",
+    administrativeDistrictLevel1: "", // state
+    organization: "", // church
+    postalCode: "", // of residence
+    note: "", // roommate request
+    phoneNumber: "",
   };
 
   var paymentForm = new SqPaymentForm({
