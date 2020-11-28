@@ -7,8 +7,18 @@
 />
 
 <div id="form-container">
-  <input type="text" id="firstName" class="sq-input half" />
-  <input type="text" id="lastName" class="sq-input half" />
+  <input
+    type="text"
+    id="firstName"
+    class="sq-input half"
+    oninput="updateCustomerInfo(event)"
+  />
+  <input
+    type="text"
+    id="lastName"
+    class="sq-input half"
+    oninput="updateCustomerInfo(event)"
+  />
 
   <hr />
   <div id="sq-card-number"></div>
