@@ -7,6 +7,10 @@
 />
 
 <div id="form-container">
+  <input type="text" id="firstName" class="sq-input half" />
+  <input type="text" id="lastName" class="sq-input half" />
+
+  <hr />
   <div id="sq-card-number"></div>
   <div class="third" id="sq-expiration-date"></div>
   <div class="third" id="sq-cvv"></div>
@@ -26,6 +30,16 @@
 ></script>
 <script>
   var idempotency_key = uuidv4();
+  var customerInfo = {
+    addressLine1: "",
+    addressLine2: "",
+    country: "US",
+    firstName: "",
+    lastName: "",
+    locality: "",
+    organization: "",
+    postalCode: "",
+  };
 
   var paymentForm = new SqPaymentForm({
     applicationId: "sandbox-sq0idb-FymkEHMQtf6ayqxDEhVIkw",
@@ -69,16 +83,7 @@
           idempotency_key: idempotency_key,
           location_id: "LAGYR80EAVG00",
           buyerEmailAddress: "johndoe@example.com",
-          billingAddress: {
-            addressLine1: "101 N. South St.",
-            addressLine2: "",
-            country: "US",
-            firstName: "John",
-            lastName: "Doe",
-            locality: "Hanford",
-            organization: "Church",
-            postalCode: "11111",
-          },
+          billingAddress: customerInfo,
         });
 
         xhr.onreadystatechange = function () {
@@ -124,5 +129,12 @@
         return v.toString(16);
       }
     );
+  }
+
+  function updateCustomerInfo(event) {
+    var id = event.target.id;
+    var value = event.target.value;
+
+    customerInfo[id] = value;
   }
 </script>
