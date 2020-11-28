@@ -8,9 +8,9 @@
 
 <div id="form-container">
   <div id="sq-card-number"></div>
-  <div id="sq-expiration-date"></div>
-  <div id="sq-cvv"></div>
-  <div id="sq-postal-code"></div>
+  <div class="third" id="sq-expiration-date"></div>
+  <div class="third" id="sq-cvv"></div>
+  <div class="third" id="sq-postal-code"></div>
   <button id="sq-creditcard" onclick="onGetCardNonce(event)">Pay $75.00</button>
 </div>
 
@@ -24,6 +24,16 @@
   var paymentForm = new SqPaymentForm({
     applicationId: "sandbox-sq0idb-FymkEHMQtf6ayqxDEhVIkw",
     inputClass: "sq-input",
+
+    inputStyles: [
+      {
+        fontSize: "16px",
+        lineHeight: "24px",
+        padding: "16px",
+        placeholderColor: "#a0a0a0",
+        backgroundColor: "transparent",
+      },
+    ],
 
     cardNumber: {
       elementId: "sq-card-number",
