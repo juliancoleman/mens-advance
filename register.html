@@ -1,3 +1,11 @@
+---
+---
+
+<link
+  rel="stylesheet"
+  href="https://mens-advance-api.herokuapp.com/mysqpaymentform.css"
+/>
+
 <div id="form-container">
   <div id="sq-card-number"></div>
   <div id="sq-expiration-date"></div>
@@ -44,6 +52,17 @@
           nonce: nonce,
           idempotency_key: idempotency_key,
           location_id: "LAGYR80EAVG00",
+          buyerEmailAddress: "johndoe@example.com",
+          billingAddress: {
+            addressLine1: "101 N. South St.",
+            addressLine2: "",
+            country: "US",
+            firstName: "John",
+            lastName: "Doe",
+            locality: "Hanford",
+            organization: "Church",
+            postalCode: "11111",
+          },
         });
 
         xhr.onreadystatechange = function () {
