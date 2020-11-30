@@ -10,14 +10,14 @@
   <div>
     <input
       type="text"
-      id="firstName"
+      id="givenName"
       class="sq-input input-base half pad"
       placeholder="First Name"
       oninput="updateCustomerInfo(event)"
     />
     <input
       type="text"
-      id="lastName"
+      id="familyName"
       class="sq-input input-base half pad"
       placeholder="Last Name"
       oninput="updateCustomerInfo(event)"
@@ -42,21 +42,21 @@
     id="organization"
     class="sq-input input-base"
     placeholder="Home church"
-    oninput="updateCustomerInfo(event)"
+    oninput="updateCustomerAddress(event)"
   />
   <input
     type="text"
     id="addressLine1"
     class="sq-input input-base"
     placeholder="Address"
-    oninput="updateCustomerInfo(event)"
+    oninput="updateCustomerAddress(event)"
   />
   <input
     type="text"
     id="addressLine2"
     class="sq-input input-base"
     placeholder="Apt, Suite, etc. (optional)"
-    oninput="updateCustomerInfo(event)"
+    oninput="updateCustomerAddress(event)"
   />
   <div>
     <input
@@ -64,21 +64,21 @@
       id="locality"
       class="sq-input input-base third pad"
       placeholder="City"
-      oninput="updateCustomerInfo(event)"
+      oninput="updateCustomerAddress(event)"
     />
     <input
       type="text"
       id="administrativeDistrictLevel1"
       class="sq-input input-base third pad"
       placeholder="State"
-      oninput="updateCustomerInfo(event)"
+      oninput="updateCustomerAddress(event)"
     />
     <input
       type="text"
       id="postalCode"
       class="sq-input input-base third pad"
       placeholder="Postal"
-      oninput="updateCustomerInfo(event)"
+      oninput="updateCustomerAddress(event)"
     />
   </div>
   <input
@@ -107,19 +107,21 @@
   src="https://js.squareupsandbox.com/v2/paymentform"
 ></script>
 <script>
-  var idempotency_key = uuidv4();
   var customerInfo = {
-    addressLine1: "",
-    addressLine2: "",
-    country: "US",
-    firstName: "",
-    lastName: "",
-    locality: "",
-    administrativeDistrictLevel1: "", // state
-    organization: "", // church
-    postalCode: "", // of residence
+    idempotency_key: uuidv4(),
+    givenName: "", // first name
+    familyName: "", // last name
     note: "", // roommate request
     phoneNumber: "",
+    address: {
+      addressLine1: "",
+      addressLine2: "",
+      country: "US",
+      locality: "",
+      administrativeDistrictLevel1: "", // state
+      organization: "", // church
+      postalCode: "", // of residence
+    },
   };
 
   var paymentForm = new SqPaymentForm({
@@ -161,10 +163,10 @@
 
         var body = JSON.stringify({
           nonce: nonce,
-          idempotency_key: idempotency_key,
+          idempotency_key: uuidv4(),
           location_id: "LAGYR80EAVG00",
           buyerEmailAddress: "johndoe@example.com",
-          billingAddress: customerInfo,
+          customerInfo: customerInfo,
         });
 
         xhr.onreadystatechange = function () {
@@ -217,5 +219,12 @@
     var value = event.target.value;
 
     customerInfo[id] = value;
+  }
+
+  function updateCustomerAddress(event) {
+    var id = event.target.id;
+    var value = event.target.value;
+
+    customerInfo["address"][id] = value;
   }
 </script>
