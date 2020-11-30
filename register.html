@@ -39,10 +39,10 @@
   />
   <input
     type="text"
-    id="organization"
+    id="companyName"
     class="sq-input input-base"
     placeholder="Home church"
-    oninput="updateCustomerAddress(event)"
+    oninput="updateCustomerInfo(event)"
   />
   <input
     type="text"
@@ -114,13 +114,13 @@
     familyName: "", // last name
     note: "", // roommate request
     phoneNumber: "",
+    companyName: "", // church
     address: {
       addressLine1: "",
       addressLine2: "",
       country: "US",
       locality: "",
       administrativeDistrictLevel1: "", // state
-      organization: "", // church
       postalCode: "", // of residence
     },
   };
