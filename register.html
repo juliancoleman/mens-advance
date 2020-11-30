@@ -176,13 +176,11 @@
           // process our return data
           if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             // success
-            alert(
-              "Payment complete successfully!\nCheck browser developer console for more details"
-            );
+            window.location.href = xhr.response.result.payment.receiptUrl;
           } else {
             // failure
             alert(
-              "Payment failed to complete!\nCheck browser developer console for more details"
+              "Payment failed to complete! Please verify your info and try again."
             );
           }
         };
