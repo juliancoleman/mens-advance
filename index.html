@@ -10,8 +10,8 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 
 {% include hero.html %}
 
-<div class="container" style="margin-top: 60px; text-align: center;">
-  <img src="/assets/images/pngwing.png" alt="pngwing" width="341">
+<div class="container" style="margin-top: 60px; text-align: center">
+  <img src="/assets/images/pngwing.png" alt="pngwing" width="341" />
 
   <p id="about-text" class="blurb-1">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -21,29 +21,20 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
   </p>
 
   <p class="bible-verse">
-    &quot;As iron sharpens iron, so one brother sharpens another.&quot;<br>
+    &quot;As iron sharpens iron, so one brother sharpens another.&quot;<br />
     -- Proverbs 27:17
   </p>
 </div>
 
-<div class="container" style="margin-top: 5.125rem; text-align: center;">
+<div class="container" style="margin-top: 5.125rem; text-align: center">
   <h4 class="big-header">
-    Speaker
-    {% if site.speakers.size > 1 %}
-      s
-    {% endif %}
+    Speaker {% if site.speakers.size > 1 %} s {% endif %}
   </h4>
 
-  <div style="margin-top: 6rem;">
-    {% for speaker in site.speakers %}
-      {% include speaker-card.html
-                 avatar=speaker.avatar
-                 bio_long=speaker.bio_long
-                 bio_short=speaker.bio_short
-                 name=speaker.name
-                 url=speaker.url
-      %}
-    {% endfor %}
+  <div style="margin-top: 6rem">
+    {% for speaker in site.speakers %} {% include speaker-card.html
+    avatar=speaker.avatar bio_long=speaker.bio_long bio_short=speaker.bio_short
+    name=speaker.name url=speaker.url %} {% endfor %}
   </div>
 
   {% include register-button.html %}
@@ -53,13 +44,22 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
   <div class="container">
     <h4 class="big-header">Time & Place</h4>
 
-    <p class="blurb-1" style="margin-bottom: 3rem;">
+    <p class="blurb-1" style="margin-bottom: 3rem">
       Men’s Advance takes place every year at the beautiful St. Anthony’s
-      Retreat in Three Rivers, California. Join us February 19th to the 21st
-      for reading of Scripture, fellowship, and worship.
+      Retreat in Three Rivers, California. Join us February 19th to the 21st for
+      reading of Scripture, fellowship, and worship.
     </p>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18150.823822682025!2d-118.87467427092892!3d36.466183312289594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8095454ff9e8abdd%3A0x208536899cf03476!2sSt%20Anthony%20Retreat!5e0!3m2!1sen!2sus!4v1606108623480!5m2!1sen!2sus" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18150.823822682025!2d-118.87467427092892!3d36.466183312289594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8095454ff9e8abdd%3A0x208536899cf03476!2sSt%20Anthony%20Retreat!5e0!3m2!1sen!2sus!4v1606108623480!5m2!1sen!2sus"
+      width="800"
+      height="400"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    ></iframe>
   </div>
 </figure>
 
@@ -69,10 +69,10 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
 
     <p class="blurb-2">
       Register today for Men's Advance! You can submit your deposit and
-      information via our secure checkout. Below is a table of amenities you
-      may choose from during your stay at the retreat. Cost includes room,
-      meals, use of the retreat center, basketball courts, pool, ping pong tables,
-      and more!
+      information via our secure checkout. Below is a table of amenities you may
+      choose from during your stay at the retreat. Cost includes room, meals,
+      use of the retreat center, basketball courts, pool, ping pong tables, and
+      more!
     </p>
 
     <table>
@@ -102,12 +102,12 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
         </tr>
         <tr>
           <td>RV Site</td>
-          <td>-</td>
+          <td>covers all meals during stay</td>
           <td>$200</td>
         </tr>
         <tr>
           <td>Day Use</td>
-          <td>-</td>
+          <td>covers all meals during stay</td>
           <td>$80</td>
         </tr>
         <tr>
@@ -124,9 +124,10 @@ hero_blurb: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
     </table>
 
     <p class="blurb-2">
-      If you require any special needs, we are more than happy to accommodate you.
-      Any damage to any room will be that individual's responsibility. If you have
-      any questions, contact Lucky Crane at 209-765-6619 or Jim Hanson at 559-923-1200.
+      If you require any special needs, we are more than happy to accommodate
+      you. Any damage to any room will be that individual's responsibility. If
+      you have any questions, contact Lucky Crane at 209-765-6619 or Jim Hanson
+      at 559-923-1200.
     </p>
 
     {% include register-button.html %}
