@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JVLLLJQZFW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Load fonts from Google -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="{{ site.fonts_url }}">
+      gtag("config", "G-JVLLLJQZFW");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Local styles -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- Load fonts from Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="{{ site.fonts_url }}" />
 
-  <title>{{ site.title }}</title>
+    <!-- Local styles -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
 
-  <!-- https://stackoverflow.com/a/42969608 -->
-  <!-- https://crbug.com/332189, https://crbug.com/167083 -->
-  <script></script>
-</head>
-<body>
+    <title>{{ site.title }}</title>
 
-  {% include header.html %}
+    <!-- https://stackoverflow.com/a/42969608 -->
+    <!-- https://crbug.com/332189, https://crbug.com/167083 -->
+    <script></script>
+  </head>
+  <body>
+    {% include header.html %}
 
-  <main>
-    {{ content }}
-  </main>
+    <main>{{ content }}</main>
 
-  {% include footer.html %}
-
-</body>
+    {% include footer.html %}
+  </body>
 </html>
